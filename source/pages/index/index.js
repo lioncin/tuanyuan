@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
+    motto: '开始制作自己的团员证',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -49,6 +49,11 @@ Page({
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
+    })
+  },
+  redirect: function(){
+    wx.redirectTo({
+      url: '/pages/edit/index'
     })
   }
 })

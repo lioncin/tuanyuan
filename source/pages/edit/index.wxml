@@ -1,0 +1,48 @@
+<view class='box edit'>
+  <view class='box-container'>
+    <view class='edit-top'>
+      <image src='http://www.sipso.com.cn/buffalo/tyz/bg1.png'></image>
+    </view>
+    <view class='edit-mid'>
+      <view class='edit-mid-container'>
+        <view class='edit-input'>
+          <view class='text'>姓名：</view>
+          <input type='text' class='content inp'>{{name}}</input>
+        </view><!-- end of input name -->
+        
+        <view class='edit-input'>
+          <view class='text'>性别：</view>
+          <radio-group class="radio-group content" bindchange="radioChange">
+            <label class="radio" wx:for="{{items}}">
+              <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+            </label>
+          </radio-group>
+        </view><!-- end of gender change -->
+
+        <view class='edit-input'>
+          <view class='text'>出生年月：</view>
+          <picker
+            class='timechange birthday content'
+            mode="date"
+            value="{{birthday}}"
+            start="2015-09-01"
+            end="2017-09-01"
+            bindchange="bindDateChange"><view class="picker">当前选择:{{birthday}}</view>
+          </picker>
+        </view><!-- end of birthday -->
+
+        <view class='edit-input'>
+          <view class='text'>家庭住址：</view>
+          <input type='text' class='content inp'>{{homeAddress}}</input>
+        </view><!-- end of home address -->
+
+        <view class='edit-input'>
+          <view class='text'>工作单位：</view>
+          <input type='text' class='content inp'>{{workAddress}}</input>
+        </view><!-- end of work address -->
+
+      </view>
+    </view>
+    <view class='edit-btm'></view>
+  </view>
+</view>

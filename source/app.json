@@ -1,12 +1,15 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/edit/index",
+    "pages/photo/index",
+    "pages/view/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "团员证",
     "navigationBarTextStyle":"black"
   }
 }

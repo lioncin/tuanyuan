@@ -1,48 +1,44 @@
 <view class='box edit'>
   <view class='box-container'>
     <view class='edit-top'>
-      <image src='http://www.sipso.com.cn/buffalo/tyz/bg1.png'></image>
-    </view>
-    <view class='edit-mid'>
-      <view class='edit-mid-container'>
-        <view class='edit-input'>
-          <view class='text'>姓名：</view>
-          <input type='text' class='content inp'>{{name}}</input>
-        </view><!-- end of input name -->
-        
-        <view class='edit-input'>
-          <view class='text'>性别：</view>
-          <radio-group class="radio-group content" bindchange="radioChange">
-            <label class="radio" wx:for="{{items}}">
-              <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
-            </label>
-          </radio-group>
-        </view><!-- end of gender change -->
-
-        <view class='edit-input'>
-          <view class='text'>出生年月：</view>
-          <picker
-            class='timechange birthday content'
-            mode="date"
-            value="{{birthday}}"
-            start="2015-09-01"
-            end="2017-09-01"
-            bindchange="bindDateChange"><view class="picker">当前选择:{{birthday}}</view>
-          </picker>
-        </view><!-- end of birthday -->
-
-        <view class='edit-input'>
-          <view class='text'>家庭住址：</view>
-          <input type='text' class='content inp'>{{homeAddress}}</input>
-        </view><!-- end of home address -->
-
-        <view class='edit-input'>
-          <view class='text'>工作单位：</view>
-          <input type='text' class='content inp'>{{workAddress}}</input>
-        </view><!-- end of work address -->
-
-      </view>
-    </view>
-    <view class='edit-btm'></view>
-  </view>
-</view>
+      <image mode='scaleToFill' src='http://www.sipso.com.cn/buffalo/tyz/edit-top-bg.jpg'></image>
+    </view><!-- end of top -->
+    <view class='edit-content'>
+      <view class='edit-content-inputs'>
+        <view class='edit-inputs-container'>
+          <view class='edit-input name'>
+            <view class='label'>姓名：</view>
+            <view class='content'></view>
+          </view><!-- end of name -->
+          <view class='edit-input gender'>
+            <view class='label'>性别：</view>
+            <view class='content'></view>
+          </view><!-- end of gender -->
+          <view class='edit-input birthday'>
+            <view class='label'>出生年月：</view>
+            <view class='content'></view>
+          </view><!-- end of birthday -->
+          <view class='edit-input rutuan'>
+            <view class='label'>入团时间：</view>
+            <view class='content'></view>
+          </view><!-- end of rutuan -->
+          <view class='edit-input home'>
+            <view class='label'>家庭住址：</view>
+            <view class='content'></view>
+          </view><!-- end of home -->
+          <view class='edit-input company'>
+            <view class='label'>工作单位：</view>
+            <view class='content'></view>
+          </view><!-- end of conpany -->
+        </view><!-- end of edit input container -->
+      </view><!-- end of edit contnet inputs -->
+      <view class='edit-buttons'></view><!-- end of buttons -->
+    
+    
+     </view><!-- end of btm -->
+    <view class='edit-btm'>
+      <image mode='scaleToFill' src='http://www.sipso.com.cn/buffalo/tyz/edit-btm-bg.jpg'></image>
+   
+    </view><!-- end of edit content -->
+  </view><!-- end of box container -->
+</view><!-- end of box -->

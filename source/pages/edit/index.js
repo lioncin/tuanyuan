@@ -5,12 +5,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    name:'',
-    birthday:'',
-    gender:'F',
-    rutuan:'',
-    homeAddress:'',
-    workAddress: '',
+    name:'', //姓名
+    birthday:'', //生日
+    gender:'F', //性别
+    rutuan:'', //入团时间
+    home:'', //家庭住址
+    company: '', //公司地址
     items: [
       { name: 'F', value: '女' },
       { name: 'M', value: '男', checked: 'true' }

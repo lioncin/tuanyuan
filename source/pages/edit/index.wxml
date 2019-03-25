@@ -1,44 +1,50 @@
-<view class='box edit'>
-  <view class='box-container'>
-    <view class='edit-top'>
-      <image mode='scaleToFill' src='http://www.sipso.com.cn/buffalo/tyz/edit-top-bg.jpg'></image>
-    </view><!-- end of top -->
+<view class='container edit'>
+	<!--表单开始-->
     <view class='edit-content'>
       <view class='edit-content-inputs'>
         <view class='edit-inputs-container'>
           <view class='edit-input name'>
-            <view class='label'>姓名：</view>
-            <view class='content'></view>
+            <view class='label small_lab'>姓 名: </view>
+			<input type="text" class="small_tex" value='{{name}}' />
           </view><!-- end of name -->
           <view class='edit-input gender'>
-            <view class='label'>性别：</view>
-            <view class='content'></view>
+            <view class='label small_lab'>性 别: </view>
+			<input type="text" class="small_tex" value='{{gender}}' />
           </view><!-- end of gender -->
           <view class='edit-input birthday'>
-            <view class='label'>出生年月：</view>
-            <view class='content'></view>
+           <view class='label'>出生年月:</view>
+			<picker mode="date" value="{{birthday}}" start="1950-01-01" end="2020-09-01" bindchange="bindBirthdayChange" style="flex:7;height:100%;">
+				<view class="picker" style="flex:7;height:70rpx;line-height:70rpx;">
+					{{birthday}}
+				</view>
+			</picker>
           </view><!-- end of birthday -->
           <view class='edit-input rutuan'>
-            <view class='label'>入团时间：</view>
-            <view class='content'></view>
+            <view class='text'>入团时间: </view>
+            <!--<input type="text" />-->
+			<picker mode="date" value="{{rutuan}}" start="1960-01-01" end="2020-12-01" bindchange="bindRutuanChange" style="flex:7;height:100%;">
+				<view class="picker" style="flex:7;height:70rpx;line-height:70rpx;">
+					{{rutuan}}
+				</view>
+			</picker>
           </view><!-- end of rutuan -->
           <view class='edit-input home'>
-            <view class='label'>家庭住址：</view>
-            <view class='content'></view>
+            <view class='label'>家庭住址: </view>
+            <input type="text" value='{{home}}' />
           </view><!-- end of home -->
           <view class='edit-input company'>
-            <view class='label'>工作单位：</view>
-            <view class='content'></view>
+            <view class='text'>工作单位: </view>
+            <input type="text" value='{{company}}' />
           </view><!-- end of conpany -->
+		  <view class="btn">
+			 <button bindtap='redirect'>上传照片</button>
+			 <button>提  交</button>
+		 </view>	
+		 <!--end of btn-->  
+		  
         </view><!-- end of edit input container -->
       </view><!-- end of edit contnet inputs -->
       <view class='edit-buttons'></view><!-- end of buttons -->
-    
-    
-     </view><!-- end of btm -->
-    <view class='edit-btm'>
-      <image mode='scaleToFill' src='http://www.sipso.com.cn/buffalo/tyz/edit-btm-bg.jpg'></image>
-   
-    </view><!-- end of edit content -->
-  </view><!-- end of box container -->
+     </view><!-- end of btm --> 
+	<!--表单结束--> 
 </view><!-- end of box -->

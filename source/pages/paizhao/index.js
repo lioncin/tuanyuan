@@ -1,22 +1,13 @@
-// pages/edit/index.js
+// pages/paizhao/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-	date: '',  
-    name:'', //姓名
-    birthday:'', //生日
-    gender:'男', //性别
-    rutuan:'', //入团时间
-    home:'', //家庭住址
-    company: '', //公司地址
-    items: [
-      { name: 'F', value: '女' },
-      { name: 'M', value: '男', checked: 'true' }
-    ],
+    selectedImageUrl:''
   },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -24,31 +15,10 @@ Page({
 
   },
 
-  bindBirthdayChange: function(e){
-    //birthday change
-    this.setData({
-      birthday: e.detail.value
-   })
-  },
-
-  bindRutuanChange: function(e){
-    //ru tuan shijian change
-    this.setData({
-      rutuan: e.detail.value
-    })
- },
-
-  radioChange: function(e){
-    //性别修改
-    this.setData({
-      gender: e.detail.value
-    })
-  },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
- onReady: function () {
+  onReady: function () {
 
   },
 
@@ -93,11 +63,26 @@ Page({
   onShareAppMessage: function () {
 
   },
-   
-  redirect: function(){
+
+  save: function(){
     wx.redirectTo({
-      url: '/pages/paizhao/index'
+      url: '/pages/photo/index'
+    })
+  },
+
+  photo: function(){
+    var that = this;
+    wx.chooseImage({
+      count: 1, // 默认9
+      sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+      sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+      success: function (res) {
+        // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
+        var tempFilePaths = res.tempFilePaths
+        that.setData({
+          selectedImageUrl: tempFilePaths
+        })
+      }
     })
   }
 })
-

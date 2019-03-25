@@ -1,2 +1,26 @@
 <!--pages/photo/index.wxml-->
-<text>pages/photo/index.wxml</text>
+<view class="container">
+	<view class="photo-content">
+		<view class="l">
+			<view class="bgl"></view>
+		</view>
+		<view class="r">
+			<view class="bgt"></view>
+			<view class="info">
+				<view class="contents">
+					<view class="left">
+						<view class="view_sm">团员姓名<text>张三</text></view>
+						<view class="view_sm">团员性别<text>男</text></view>
+						<view class="view_sm">出生年月<text>1980-05-31</text></view>
+						<view class="view_sm">入团时间<text>2007-5-31</text></view>
+					</view>
+					<view class="right">
+						<image class="photo_img" src="../image/photo_img.png" style="width:100%;height:100%;"/>
+					</view>
+				</view>
+				<view class="bgb"></view>
+			</view>
+			<view class="ys">苏州工业园区团工委</view>
+		</view>
+	</view>
+</view>

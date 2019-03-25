@@ -4,6 +4,7 @@
     "pages/logs/logs",
     "pages/edit/index",
     "pages/photo/index",
+    "pages/paizhao/index",
     "pages/view/index"
   ],
   "window":{

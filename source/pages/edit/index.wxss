@@ -1,5 +1,75 @@
-.box{width: 100%;height: auto;margin: 0;padding: 0;font-family: 'Microsoft YaHei'}
-.box-container{width: 100%;height: auto;margin: 0;padding: 0;}
-.box image{ width: 100%;}
-.edit .edit-top{ width: 100%; height: 100px; }
-.edit .edit-btm{ width: 100%; height: 200px; }
+page{
+	height: 100%;
+    position: relative;
+    overflow: hidden;
+    background: url('http://www.sipso.com.cn/buffalo/tyz/bg.jpg') no-repeat; 
+    background-size: 100% 100%;
+    margin: 0 auto;
+}
+.container{
+	padding:70rpx;
+	font-family: 'Microsoft YaHei';
+	}
+
+/*表单*/
+.edit-content{
+	background: rgba(0, 0, 0, 0.1);
+	padding:60rpx; 
+	width:80%; 
+	margin-top:150rpx;
+
+}
+.edit-content .edit-input{
+	background:#fff;
+	border:1px solid #ddd;
+	margin-top:50rpx;
+	font-size:30rpx;
+	padding-left:15rpx;
+	margin:20rpx 0;
+	height:70rpx;
+	line-height:70rpx;
+	border-radius:5px;
+	display:flex;
+	align-items:center;
+}
+.edit-inputs-container .name{
+	margin-top:0;
+	position:relative;
+}
+.edit-input input,.edit-input .text{
+	display:inline-block;
+	height:70rpx;
+	line-height:70rpx;
+}
+.edit-input input{
+	flex:7;
+}
+.edit-input .text{
+	flex:3;
+}
+.edit-input .small_lab{
+	flex:2;
+}
+.edit-input .small_tex{
+	flex:8;
+}
+.edit-inputs-container .btn{
+	margin-top:70rpx;
+}
+.btn button{
+	margin-top:20rpx;
+	color:#234278;
+	background: linear-gradient(white,#cae0ee);
+	height:80rpx;
+	line-height:80rpx;
+}
+.edit-input .tips{
+	background: url('http://www.sipso.com.cn/buffalo/tyz/tips.png') no-repeat; 
+    width:30rpx;
+	height:30rpx;
+	background-size:30rpx 30rpx;
+	display:inline-block;
+	position:absolute;
+	left:-40rpx;
+	
+}

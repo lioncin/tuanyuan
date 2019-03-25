@@ -1,0 +1,7 @@
+<view class='container edit'>
+  <image src='{{selectedImageUrl}}'></image>
+	 <view class="btn">
+			 <button bindtap='photo'>上传照片</button>
+       <button bindtap='save'>保存</button>
+		 </view>
+</view><!-- end of box -->

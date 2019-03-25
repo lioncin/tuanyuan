@@ -5,11 +5,11 @@
         <view class='edit-inputs-container'>
           <view class='edit-input name'>
             <view class='label small_lab'>姓 名: </view>
-			<input type="text" class="small_tex" value='{{name}}' />
+			        <input bindinput="bindNameInput" type="text" class="small_tex" value='{{name}}' />
           </view><!-- end of name -->
           <view class='edit-input gender'>
             <view class='label small_lab'>性 别: </view>
-			<input type="text" class="small_tex" value='{{gender}}' />
+			        <input bindinput="bindGenderInput" type="text" class="small_tex" value='{{gender}}' />
           </view><!-- end of gender -->
           <view class='edit-input birthday'>
            <view class='label'>出生年月:</view>
@@ -30,15 +30,14 @@
           </view><!-- end of rutuan -->
           <view class='edit-input home'>
             <view class='label'>家庭住址: </view>
-            <input type="text" value='{{home}}' />
+            <input bindinput="bindHomeInput" type="text" value='{{home}}' />
           </view><!-- end of home -->
           <view class='edit-input company'>
             <view class='text'>工作单位: </view>
-            <input type="text" value='{{company}}' />
+            <input bindinput="bindCompanyInput" type="text" value='{{company}}' />
           </view><!-- end of conpany -->
 		  <view class="btn">
 			 <button bindtap='redirect'>上传照片</button>
-			 <button>提  交</button>
 		 </view>	
 		 <!--end of btn-->  
 		  

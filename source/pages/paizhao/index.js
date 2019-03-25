@@ -5,14 +5,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-    selectedImageUrl:''
+    selectedImageUrl:'',
+    user:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let user = JSON.parse(options.user);
+    this.setData({
+      user: user
+    })
   },
 
   /**
@@ -65,9 +69,19 @@ Page({
   },
 
   save: function(){
-    wx.redirectTo({
-      url: '/pages/photo/index'
-    })
+    if(this.data.selectedImageUrl==''){
+      wx.showToast({
+        title: '请提交照片！',
+        icon: 'success'
+      });
+    }else{
+      let user = this.data.user;
+      console.log(user);
+      wx.redirectTo({
+        url: '/pages/photo/index?user=' + JSON.stringify(user)
+      })
+    }
+    
   },
 
   photo: function(){
@@ -78,10 +92,11 @@ Page({
       sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
       success: function (res) {
         // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
-        var tempFilePaths = res.tempFilePaths
+        var tempFilePaths = res.tempFilePaths;
         that.setData({
-          selectedImageUrl: tempFilePaths
-        })
+          selectedImageUrl: tempFilePaths,
+          user: Object.assign(that.data.user, { 'photoUrl': tempFilePaths})
+        });
       }
     })
   }

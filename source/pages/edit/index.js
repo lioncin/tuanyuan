@@ -5,7 +5,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-	date: '',  
     name:'', //姓名
     birthday:'', //生日
     gender:'男', //性别
@@ -93,11 +92,51 @@ Page({
   onShareAppMessage: function () {
 
   },
+
+  bindNameInput:function(e){
+    this.setData({
+      name: e.detail.value
+    })
+  },
+
+  bindGenderInput: function(e){
+    this.setData({
+      gender: e.detail.value
+    })
+  },
+
+  bindHomeInput:function(e){
+    this.setData({
+      home: e.detail.value
+    })
+  },
+
+  bindCompanyInput: function(e){
+    this.setData({
+      company: e.detail.value
+    })
+  },
    
   redirect: function(){
-    wx.redirectTo({
-      url: '/pages/paizhao/index'
-    })
+    if (this.data.name == '' || this.data.gender == '' || this.data.birthday == '' || this.data.home == '' || this.data.company==''){
+      wx.showToast({
+        title: '请完善个人信息！',
+        icon: 'success'
+      });
+    }else{
+      let user = {
+        'name':this.data.name,
+        'gender': this.data.gender,
+        'home': this.data.home,
+        'company': this.data.company,
+        'rutuan': this.data.rutuan,
+        'birthday': this.data.birthday
+      }
+      wx.redirectTo({
+        url: '/pages/paizhao/index?user=' + JSON.stringify(user)
+      })
+    }
+    
   }
 })
 

@@ -1,6 +1,6 @@
 <!--pages/photo/index.wxml-->
-<view class="container">
-	<view class="photo-content">
+  <scroll-view scroll-x="true" style="width: 100%" class="container">
+  <view class="photo-content">
 		<view class="l">
 			<view class="bgl"></view>
 		</view>
@@ -23,4 +23,4 @@
 			<view class="ys">苏州工业园区团工委</view>
 		</view>
 	</view>
-</view>
+  </scroll-view><!-- end of scroll -->

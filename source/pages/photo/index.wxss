@@ -1,10 +1,10 @@
 /* pages/photo/index.wxss */
 page{
+  width: 1360px;
 	height: 100%;
-    position: relative;
-    overflow: hidden;
-    background: url('http://www.sipso.com.cn/buffalo/tyz/photo_bg.png') repeat-y; 
-    margin: 0 auto;
+  position: relative;
+  background: url('http://www.sipso.com.cn/buffalo/tyz/photo_bg.png') repeat-y; 
+  margin: 0 auto;
 }
 .container{
 	padding:70rpx;

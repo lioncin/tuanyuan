@@ -5,17 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-    name:'',
-    gender:'',
-    home:'',
-    company:''
+    user: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let user = JSON.parse(options.user);
+    this.setData({
+      user: user
+    });
   },
 
   /**

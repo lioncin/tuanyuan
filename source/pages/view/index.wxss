@@ -1,1 +1,66 @@
-/* pages/view/index.wxss */
+page{
+  overflow: scroll;
+  font-family: 'Microsoft YaHei';
+  display: flex;
+  width: 577px;
+  height: 339px;
+}
+
+.left{
+  width: 272px;
+  height: 338px;
+  background: url('http://www.sipso.com.cn/buffalo/tyz/view2-l.jpg');
+  display: flex;
+}
+
+.right{
+  width: 305px;
+  height: 338px;
+}
+
+.right .top{
+  width: 305px;
+  height: 194px;
+  background: url('http://www.sipso.com.cn/buffalo/tyz/view2-r-1.jpg');
+  display: flex;
+}
+
+.right .top .user{
+  width: 168px;
+  height: 194px;
+  color: #e1c18e;
+  position: relative;
+}
+
+.right .top .user .user-box{
+  width: 90px;
+  height: 88px;
+  position: absolute;
+  left: 80px;
+  bottom: 0;
+}
+
+.right .top .user .item{
+  font-size: 0.8em;
+  height: 22px;
+}
+
+.right .top .photo{
+  width: 128px;
+  height: 194px;
+  position: relative;
+}
+
+.right .top .photo image{
+  width: 100px;
+  height: 90px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.right .btm{
+  width: 305px;
+  height: 144px;
+  background: url('http://www.sipso.com.cn/buffalo/tyz/view2-r-2.jpg');
+}

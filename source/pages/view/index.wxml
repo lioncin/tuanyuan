@@ -1,2 +1,17 @@
-<!--pages/view/index.wxml-->
-<text>pages/view/index.wxml</text>
+<view class='left'></view>
+<view class='right'>
+  <view class='top'>
+    <view class='user'>
+      <view class='user-box'>
+        <view class='item name'>{{user.name}}</view>
+        <view class='item gender'>{{user.gender}}</view>
+        <view class='item birthday'>{{user.birthday}}</view>
+        <view class='item rutuan'>{{user.rutuan}}</view>
+      </view>
+    </view>
+    <view class='photo'>
+      <image src='{{user.photoUrl}}'></image>
+    </view>
+  </view>
+  <view class='btm'></view>
+</view>

@@ -78,7 +78,8 @@ Page({
       let user = this.data.user;
       console.log(user);
       wx.redirectTo({
-        url: '/pages/photo/view?user=' + JSON.stringify(user)
+        // url: '/pages/photo/view?user=' + JSON.stringify(user)
+        url: '/pages/view/index?user=' + JSON.stringify(user)
       })
     }
     

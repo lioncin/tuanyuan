@@ -8,7 +8,6 @@
     "pages/paizhao/index",
     "pages/view/index"
   ],
-  "pageOrientation": "auto",
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",

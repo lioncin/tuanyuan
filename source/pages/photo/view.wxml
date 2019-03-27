@@ -1,0 +1,12 @@
+<!--pages/photo/view.wxml-->
+<scroll-view scroll-x="true" class="container">
+  <view class='user'>
+    <view class='item name'>{{user.name}}</view>
+    <view class='item gender'>{{user.gender}}</view>
+    <view class='item birthday'>{{user.birthday}}</view>
+    <view class='item rutuan'>{{user.rutuan}}</view>
+  </view>
+  <view class='photo'>
+    <image src='{{user.photoUrl}}'></image>
+  </view>
+</scroll-view><!-- end of scroll -->

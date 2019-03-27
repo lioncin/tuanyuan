@@ -4,9 +4,11 @@
     "pages/logs/logs",
     "pages/edit/index",
     "pages/photo/index",
+    "pages/photo/view",
     "pages/paizhao/index",
     "pages/view/index"
   ],
+  "pageOrientation": "auto",
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",

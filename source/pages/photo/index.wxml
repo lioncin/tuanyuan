@@ -1,5 +1,5 @@
 <!--pages/photo/index.wxml-->
-  <scroll-view scroll-x="true" style="width: 100%" class="container">
+  <scroll-view scroll-x="true" class="container">
   <view class="photo-content">
 		<view class="l">
 			<view class="bgl"></view>

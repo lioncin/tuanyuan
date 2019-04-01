@@ -11,7 +11,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "团员证",
+    "navigationBarTitleText": "团员报到证",
     "navigationBarTextStyle":"black"
   }
 }

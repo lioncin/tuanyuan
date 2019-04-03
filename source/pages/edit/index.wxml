@@ -9,7 +9,11 @@
           </view><!-- end of name -->
           <view class='edit-input gender'>
             <view class='label small_lab'>性 别: </view>
-			        <input bindinput="bindGenderInput" type="text" class="small_tex" value='{{gender}}' />
+            <radio-group class="radio-group" bindchange="radioChange">
+            <radio value="F" checked='true' />女
+             <radio value="M" />男
+            </radio-group>
+			       
           </view><!-- end of gender -->
           <view class='edit-input birthday'>
            <view class='label'>出生年月:</view>
@@ -20,7 +24,7 @@
 			</picker>
           </view><!-- end of birthday -->
           <view class='edit-input rutuan'>
-            <view class='text'>入团时间: </view>
+            <view class='label'>入团时间: </view>
             <!--<input type="text" />-->
 			<picker mode="date" value="{{rutuan}}" start="1960-01-01" end="2020-12-01" bindchange="bindRutuanChange" style="flex:7;height:100%;">
 				<view class="picker" style="flex:7;height:70rpx;line-height:70rpx;">
@@ -33,7 +37,7 @@
             <input bindinput="bindHomeInput" type="text" value='{{home}}' />
           </view><!-- end of home -->
           <view class='edit-input company'>
-            <view class='text'>工作单位: </view>
+            <view class='label'>工作单位: </view>
             <input bindinput="bindCompanyInput" type="text" value='{{company}}' />
           </view><!-- end of conpany -->
 		  <view class="btn">

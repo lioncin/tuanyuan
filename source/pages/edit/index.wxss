@@ -44,11 +44,12 @@ page{
 .edit-input input{
 	flex:7;
 }
-.edit-input .text{
-	flex:3;
+.edit-input .label{
+	text-align:justify;
+  width: 30%;
 }
 .edit-input .small_lab{
-	flex:2;
+	
 }
 .edit-input .small_tex{
 	flex:8;

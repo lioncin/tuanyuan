@@ -6,6 +6,7 @@
     "pages/photo/index",
     "pages/photo/view",
     "pages/paizhao/index",
+    "pages/newview/index",
     "pages/view/index"
   ],
   "window":{

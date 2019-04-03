@@ -25,16 +25,46 @@ Page({
 
   bindBirthdayChange: function(e){
     //birthday change
-    this.setData({
-      birthday: e.detail.value
-   })
+    let arr = e.detail.value.split('-');
+    let newBirthday = new Date(arr[0], arr[1], arr[2]);
+    let now = new Date();
+    let standTutuan = new Date(now.getFullYear()-28, now.getMonth(), now.getDay());
+    if(newBirthday > now){
+      wx.showToast({
+        title: '出生年月大于今天',
+        icon: 'error'
+      });
+    }else if(newBirthday < standTutuan){
+      wx.showToast({
+        title: '您已超龄，感谢对团的关爱',
+        icon: 'error'
+      });
+    }else{
+      this.setData({
+        birthday: e.detail.value
+      })
+    }
   },
 
   bindRutuanChange: function(e){
-    //ru tuan shijian change
-    this.setData({
-      rutuan: e.detail.value
-    })
+    let value = e.detail.value.split('-');
+    let rutuan = new Date(value[0], value[1], value[2]);
+    let bval = this.data.birthday.split('-');
+    let birthday = new Date(bval[0], bval[1], bval[2]);
+    if (this.data.birthday==''){
+      wx.showToast({
+        title: '请先选择出生年月'
+      })
+    } else if (rutuan>new Date() || rutuan < birthday){
+      wx.showToast({
+        title: '入团时间在范围外'
+      })
+    }else{
+      this.setData({
+        rutuan: e.detail.value
+      })
+    }
+    
  },
 
   radioChange: function(e){

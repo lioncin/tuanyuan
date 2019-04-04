@@ -8,6 +8,8 @@ Page({
   data: {
     image4width: 0,//缩放后的宽
     image4height: 0,//缩放后的高
+    image7width: 0,//缩放后的宽
+    image7height: 0,//缩放后的高
     image5width: 0,//缩放后的宽
     image5height: 0,//缩放后的高
     image1width: 0,//缩放后的宽
@@ -70,6 +72,14 @@ Page({
     this.setData({
       image5width: imageSize.imageWidth*0.8,
       image5height: imageSize.imageHeight*0.8
+    })
+  },
+
+  imageLoad7: function (e) {
+    var imageSize = imageUtil.imageUtil(e)
+    this.setData({
+      image7width: imageSize.imageWidth * 0.4,
+      image7height: imageSize.imageHeight * 0.4
     })
   },
 

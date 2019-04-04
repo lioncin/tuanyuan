@@ -14,7 +14,11 @@
       <view class='item rutuan'>{{user.rutuan}}</view>
     </view>
     <view class='avatar'>
-      <image src='{{user.photoUrl}}'></image>
+      <image
+      style="width: {{image7width}}px; height: {{image7height}}px;"
+      src='{{user.photoUrl}}'
+       bindload="imageLoad7"
+      ></image>
     </view>
     </image>
     <image 

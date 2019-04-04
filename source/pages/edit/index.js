@@ -7,7 +7,7 @@ Page({
   data: {
     name:'', //姓名
     birthday:'', //生日
-    gender:'男', //性别
+    gender:'女', //性别
     rutuan:'', //入团时间
     home:'', //家庭住址
     company: '', //公司地址
@@ -68,7 +68,7 @@ Page({
  },
 
   radioChange: function(e){
-    //性别修改
+    console.log(e.detail.value);
     this.setData({
       gender: e.detail.value
     })
@@ -126,12 +126,6 @@ Page({
   bindNameInput:function(e){
     this.setData({
       name: e.detail.value
-    })
-  },
-
-  bindGenderInput: function(e){
-    this.setData({
-      gender: e.detail.value
     })
   },
 

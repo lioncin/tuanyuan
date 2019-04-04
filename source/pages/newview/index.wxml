@@ -1,2 +1,29 @@
-<!--pages/newview/index.wxml-->
-<text>pages/newview/index.wxml</text>
+<view class='bg'>
+  <view class='top1'>
+    <image 
+    style="width: {{image1width}}px; height: {{image1height}}px;"     
+    src='http://www.sipso.com.cn/buffalo/tyz/new-top.png'
+    bindload="imageLoad1"></image>
+  </view>
+  <view class='top2'>
+    <image
+    style="width: {{image2width}}px; height: {{image2height}}px;" 
+    src='http://www.sipso.com.cn/buffalo/tyz/new-top2.png'
+    bindload="imageLoad2"></image>
+    <view class='user'>
+      <view class='name item'></view>
+      <view class='name gender'></view>
+      <view class='name birthday'></view>
+      <view class='name rutuan'></view>
+    </view>
+  </view>
+  <view class='top3'>
+    <image style='height:80px' src='http://www.sipso.com.cn/buffalo/tyz/mid-bg.png'></image>
+  </view>
+  <view class='top4'>
+    <image
+    style="width: {{image3width}}px; height: {{image3height}}px;" 
+    bindload="imageLoad3"
+    src='http://www.sipso.com.cn/buffalo/tyz/new-btm.png'></image>
+  </view>
+</view>

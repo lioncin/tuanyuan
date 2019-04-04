@@ -1,66 +1,41 @@
-page{
-  overflow: scroll;
-  font-family: 'Microsoft YaHei';
-  display: flex;
-  width: 577px;
-  height: 339px;
+.tuanyuan{
+  background: url('http://www.sipso.com.cn/buffalo/tyz/0404/5.png') repeat-y;
 }
 
-.left{
-  width: 272px;
-  height: 338px;
-  background: url('http://www.sipso.com.cn/buffalo/tyz/view2-l.jpg');
-  display: flex;
+.sologon-container{
+  width: 100%;
+  text-align: center;
 }
 
-.right{
-  width: 305px;
-  height: 338px;
+.sologon-container .sologon{
+  text-align: center;
 }
 
-.right .top{
-  width: 305px;
-  height: 194px;
-  background: url('http://www.sipso.com.cn/buffalo/tyz/view2-r-1.jpg');
-  display: flex;
-}
-
-.right .top .user{
-  width: 168px;
-  height: 194px;
-  color: #e1c18e;
+.pos{
   position: relative;
 }
 
-.right .top .user .user-box{
-  width: 90px;
-  height: 88px;
+.user{
   position: absolute;
-  left: 80px;
-  bottom: 0;
-}
-
-.right .top .user .item{
+  z-index: 2;
   font-size: 0.8em;
-  height: 22px;
+  color: #deca99;
+  top: 0;
+  left: 30%;
 }
 
-.right .top .photo{
-  width: 128px;
-  height: 194px;
-  position: relative;
+.user .item{
+  line-height: 24px;
 }
 
-.right .top .photo image{
-  width: 100px;
-  height: 90px;
+.avatar{
   position: absolute;
-  left: 0;
-  bottom: 0;
+  z-index: 2;
+  top: 0;
+  right: 5%;
+  width: 40%;
 }
 
-.right .btm{
-  width: 305px;
-  height: 144px;
-  background: url('http://www.sipso.com.cn/buffalo/tyz/view2-r-2.jpg');
+.avatar image{
+  width: 100%;
 }

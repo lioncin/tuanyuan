@@ -1,17 +1,35 @@
-<view class='left'></view>
-<view class='right'>
-  <view class='top'>
+<view class='tuanyuan' style='width:{{image1width}}px; background-size:{{image1width}}px;'>
+  <image 
+    style="width: {{image1width}}px; height: {{image1height}}px;"     
+    src='http://www.sipso.com.cn/buffalo/tyz/0404/1.png'
+    bindload="imageLoad1"></image>
+    <image class='pos'
+    style="width: {{image2width}}px; height: {{image2height}}px;"     
+    src='http://www.sipso.com.cn/buffalo/tyz/0404/2.png'
+    bindload="imageLoad2">
     <view class='user'>
-      <view class='user-box'>
-        <view class='item name'>{{user.name}}</view>
-        <view class='item gender'>{{user.gender}}</view>
-        <view class='item birthday'>{{user.birthday}}</view>
-        <view class='item rutuan'>{{user.rutuan}}</view>
-      </view>
+      <view class='item name'>{{user.name}}</view>
+      <view class='item gender'>{{user.gender}}</view>
+      <view class='item birthday'>{{user.birthday}}</view>
+      <view class='item rutuan'>{{user.rutuan}}</view>
     </view>
-    <view class='photo'>
+    <view class='avatar'>
       <image src='{{user.photoUrl}}'></image>
     </view>
-  </view>
-  <view class='btm'></view>
+    </image>
+    <image 
+    style="width: {{image3width}}px; height: {{image3height}}px;"     
+    src='http://www.sipso.com.cn/buffalo/tyz/0404/3.png'
+    bindload="imageLoad3"></image>
+    <view class='sologon-container'>
+    <image class='sologon'
+    style="width: {{image5width}}px; height: {{image5height}}px;"
+    src='{{sologon}}'
+    bindload="imageLoad5"
+    ></image>
+    </view>
+    <image 
+    style="width: {{image4width}}px; height: {{image4height}}px;"     
+    src='http://www.sipso.com.cn/buffalo/tyz/0404/4.png'
+    bindload="imageLoad4"></image>
 </view>

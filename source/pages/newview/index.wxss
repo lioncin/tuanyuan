@@ -1,1 +1,7 @@
-/* pages/newview/index.wxss */
+.bg{
+  background: url('http://www.sipso.com.cn/buffalo/tyz/mid-bg.png') repeat-y;
+}
+
+.top2{
+  position: relative;
+}

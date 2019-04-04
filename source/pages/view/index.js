@@ -1,10 +1,22 @@
 // pages/view/index.js
+var imageUtil = require('../../utils/util.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    image4width: 0,//缩放后的宽
+    image4height: 0,//缩放后的高
+    image5width: 0,//缩放后的宽
+    image5height: 0,//缩放后的高
+    image1width: 0,//缩放后的宽
+    image1height: 0,//缩放后的高
+    image2width: 0,//缩放后的宽
+    image2height: 0,//缩放后的高
+    image3width: 0,//缩放后的宽
+    image3height: 0,//缩放后的高
+    sologon:'',
     user: {}
   },
 
@@ -13,9 +25,52 @@ Page({
    */
   onLoad: function (options) {
     let user = JSON.parse(options.user);
+    const genRandom = (min, max) => (Math.random() * (max - min + 1) | 0) + min;
+    const sologon = 'http://www.sipso.com.cn/buffalo/tyz/sologon/' + genRandom(1, 6) + '.png';
+    console.log();
     this.setData({
-      user: user
+      user: user,
+      sologon: sologon
     });
+  },
+
+  imageLoad1: function (e) {
+    var imageSize = imageUtil.imageUtil(e)
+    this.setData({
+      image1width: imageSize.imageWidth,
+      image1height: imageSize.imageHeight
+    })
+  },
+
+  imageLoad2: function (e) {
+    var imageSize = imageUtil.imageUtil(e)
+    this.setData({
+      image2width: imageSize.imageWidth,
+      image2height: imageSize.imageHeight
+    })
+  },
+
+  imageLoad3: function (e) {
+    var imageSize = imageUtil.imageUtil(e)
+    this.setData({
+      image3width: imageSize.imageWidth,
+      image3height: imageSize.imageHeight
+    })
+  },
+
+  imageLoad4: function (e) {
+    var imageSize = imageUtil.imageUtil(e)
+    this.setData({
+      image4width: imageSize.imageWidth,
+      image4height: imageSize.imageHeight
+    })
+  },
+  imageLoad5: function (e) {
+    var imageSize = imageUtil.imageUtil(e)
+    this.setData({
+      image5width: imageSize.imageWidth*0.8,
+      image5height: imageSize.imageHeight*0.8
+    })
   },
 
   /**

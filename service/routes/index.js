@@ -80,4 +80,10 @@ router.post('/user/photo', function(req, res, next){
 
 });
 
+
+router.get('/list', function(req, res, next){
+  let data = [];
+  res.render('list', { data: data });
+});
+
 module.exports = router;

@@ -1,5 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+var path = require('path');
 var router = express.Router();
 var mysql = require('mysql');
 var mysqlParams = {
@@ -10,6 +11,10 @@ var mysqlParams = {
 };
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
+
+router.get('/', function(req, res, next){
+  res.render('index', { title: 'Express' });
+});
 
 router.post('/user',urlencodedParser, function(req, res, next){
   var addSql = 'INSERT INTO CM_USER(WECHAT_ID,NAME,GENDER,HOME,COMPANY,BIRTHDAY,RUTUAN,PHOTO_URL,CREATED_AT,CREATED_BY) VALUES(?,?,?,?,?,?,?,?,NOW(),1)';
@@ -43,7 +48,6 @@ router.post('/user',urlencodedParser, function(req, res, next){
 
   var connection = mysql.createConnection(mysqlParams);
   connection.connect();
-  console.log(addSqlParams);
   connection.query(addSql,addSqlParams,function (err, result) {
     if(err){
       console.log('[INSERT ERROR] - ',err.message);

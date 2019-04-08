@@ -76,10 +76,27 @@ Page({
   },
 
   imageLoad7: function (e) {
-    var imageSize = imageUtil.imageUtil(e)
+    var imageSize = {};
+    var originalWidth = e.detail.width;//图片原始宽
+    var originalHeight = e.detail.height;//图片原始高
+    var originalScale = originalHeight / originalWidth;//图片高宽比
+    wx.getSystemInfo({
+      success: function (res) {
+        var windowWidth = res.windowWidth * 0.4;
+        var windowHeight = 100;
+        var windowscale = windowHeight / windowWidth;
+        if (originalScale < windowscale) {
+          imageSize.imageWidth = windowWidth;
+          imageSize.imageHeight = (windowWidth * originalHeight) / originalWidth;
+        }else{
+          imageSize.imageHeight = windowHeight;
+          imageSize.imageWidth = (windowHeight * originalWidth) / originalHeight;
+        }
+      }
+    })
     this.setData({
-      image7width: imageSize.imageWidth * 0.4,
-      image7height: imageSize.imageHeight * 0.4
+      image7width: imageSize.imageWidth,
+      image7height: imageSize.imageHeight
     })
   },
 
